@@ -1,0 +1,496 @@
+object Form1: TForm1
+  Left = 205
+  Height = 484
+  Top = 139
+  Width = 1110
+  Caption = 'Form1'
+  ClientHeight = 484
+  ClientWidth = 1110
+  LCLVersion = '1.0.14.0'
+  object DBGrid1: TDBGrid
+    Left = 24
+    Height = 148
+    Top = 8
+    Width = 320
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'id'
+        Width = 20
+        FieldName = 'id'
+      end    
+      item
+        Title.Caption = 'familia'
+        Width = 60
+        FieldName = 'familia'
+      end    
+      item
+        Title.Caption = 'name'
+        Width = 50
+        FieldName = 'name'
+      end    
+      item
+        Title.Caption = 'otchestvo'
+        Width = 70
+        FieldName = 'otchestvo'
+      end    
+      item
+        Title.Caption = 'telefon'
+        Width = 90
+        FieldName = 'telefon'
+      end>
+    DataSource = Datasource1
+    TabOrder = 0
+  end
+  object DBGrid2: TDBGrid
+    Left = 440
+    Height = 148
+    Top = 8
+    Width = 312
+    Color = clWindow
+    Columns = <>
+    DataSource = Datasource2
+    TabOrder = 1
+  end
+  object DBGrid3: TDBGrid
+    Left = 896
+    Height = 148
+    Top = 0
+    Width = 184
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'id'
+        Width = 20
+        FieldName = 'id'
+      end    
+      item
+        Title.Caption = 'nazvanie'
+        Width = 80
+        FieldName = 'nazvanie'
+      end    
+      item
+        Title.Caption = 'stoimost'
+        Width = 50
+        FieldName = 'stoimost'
+      end>
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 8
+    Height = 25
+    Top = 208
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object DBEdit1: TDBEdit
+    Left = 152
+    Height = 23
+    Top = 272
+    Width = 80
+    DataField = 'familia'
+    DataSource = Datasource1
+    CharCase = ecNormal
+    MaxLength = 50
+    TabOrder = 4
+    OnChange = DBEdit1Change
+  end
+  object Label1: TLabel
+    Left = 88
+    Height = 16
+    Top = 272
+    Width = 52
+    Caption = 'Фамилия'
+    ParentColor = False
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 24
+    Height = 25
+    Top = 160
+    Width = 241
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 241
+    DataSource = Datasource1
+    Options = []
+    TabOrder = 5
+  end
+  object DBEdit3: TDBEdit
+    Left = 152
+    Height = 23
+    Top = 312
+    Width = 80
+    DataField = 'name'
+    DataSource = Datasource1
+    CharCase = ecNormal
+    MaxLength = 50
+    TabOrder = 6
+  end
+  object DBEdit4: TDBEdit
+    Left = 152
+    Height = 23
+    Top = 352
+    Width = 80
+    DataField = 'otchestvo'
+    DataSource = Datasource1
+    CharCase = ecNormal
+    MaxLength = 50
+    TabOrder = 7
+  end
+  object Label3: TLabel
+    Left = 101
+    Height = 16
+    Top = 319
+    Width = 25
+    Caption = 'Имя'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 88
+    Height = 16
+    Top = 352
+    Width = 52
+    Caption = 'Отчество'
+    ParentColor = False
+  end
+  object Button2: TButton
+    Left = 128
+    Height = 25
+    Top = 206
+    Width = 75
+    Caption = 'Поиск'
+    OnClick = Button2Click
+    TabOrder = 8
+  end
+  object Edit1: TEdit
+    Left = 216
+    Height = 23
+    Top = 208
+    Width = 80
+    TabOrder = 9
+    Text = 'Edit1'
+  end
+  object Button3: TButton
+    Left = 680
+    Height = 25
+    Top = 176
+    Width = 75
+    Caption = 'Button3'
+    OnClick = Button3Click
+    TabOrder = 10
+  end
+  object DBEdit2: TDBEdit
+    Left = 952
+    Height = 23
+    Top = 160
+    Width = 80
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 11
+  end
+  object Button4: TButton
+    Left = 957
+    Height = 25
+    Top = 192
+    Width = 75
+    Caption = 'Button4'
+    TabOrder = 12
+  end
+  object DBEdit5: TDBEdit
+    Left = 152
+    Height = 23
+    Top = 385
+    Width = 80
+    DataField = 'telefon'
+    DataSource = Datasource1
+    CharCase = ecNormal
+    MaxLength = 45
+    TabOrder = 13
+  end
+  object Label5: TLabel
+    Left = 96
+    Height = 16
+    Top = 393
+    Width = 48
+    Caption = 'телефон'
+    ParentColor = False
+  end
+  object DBNavigator2: TDBNavigator
+    Left = 432
+    Height = 25
+    Top = 176
+    Width = 241
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 241
+    DataSource = DataSource4
+    Options = []
+    TabOrder = 14
+  end
+  object DBEdit6: TDBEdit
+    Left = 552
+    Height = 23
+    Top = 240
+    Width = 80
+    DataField = 'id'
+    DataSource = DataSource4
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 15
+  end
+  object DBEdit7: TDBEdit
+    Left = 552
+    Height = 23
+    Top = 272
+    Width = 80
+    DataField = 'zadoljenostabonent'
+    DataSource = DataSource4
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 16
+  end
+  object DBEdit8: TDBEdit
+    Left = 552
+    Height = 23
+    Top = 304
+    Width = 80
+    DataField = 'zadoljenostpovremen'
+    DataSource = DataSource4
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 17
+  end
+  object Label2: TLabel
+    Left = 470
+    Height = 16
+    Top = 245
+    Width = 66
+    Caption = 'ID абонента'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 443
+    Height = 16
+    Top = 279
+    Width = 93
+    Caption = 'Абонент Задолж'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 443
+    Height = 16
+    Top = 307
+    Width = 103
+    Caption = 'Повремен Задолж'
+    ParentColor = False
+  end
+  object MySQL50Connection1: TMySQL50Connection
+    Connected = True
+    LoginPrompt = False
+    AfterConnect = MySQL50Connection1AfterConnect
+    DatabaseName = 'kartoteka'
+    KeepConnection = False
+    Password = '123456'
+    Transaction = SQLTransaction1
+    UserName = 'root'
+    HostName = 'localhost'
+    LogEvents = []
+    left = 104
+    top = 440
+  end
+  object Datasource1: TDatasource
+    DataSet = SQLQuery1
+    left = 16
+    top = 384
+  end
+  object SQLQuery1: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'familia'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'name'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'otchestvo'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'telefon'
+        DataType = ftString
+        Precision = -1
+        Size = 45
+      end>
+    Active = True
+    Database = MySQL50Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from fio;'
+    )
+    Params = <>
+    left = 16
+    top = 328
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Action = caNone
+    Database = MySQL50Connection1
+    left = 16
+    top = 272
+  end
+  object SQLTransaction2: TSQLTransaction
+    Active = True
+    Action = caNone
+    Database = MySQL50Connection1
+    left = 384
+    top = 8
+  end
+  object SQLQuery2: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'familia'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'name'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'otchestvo'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'zadoljenostabonent'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'zadoljenostpovremen'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end>
+    Active = True
+    Database = MySQL50Connection1
+    Transaction = SQLTransaction2
+    SQL.Strings = (
+      'select j.id,f.familia,f.name,f.otchestvo,j.zadoljenostabonent,j.zadoljenostpovremen from jurnal j'
+      'join fio f on j.id=f.id;'
+    )
+    UpdateSQL.Strings = (
+      'select * from jurnal;'
+    )
+    Params = <>
+    left = 384
+    top = 64
+  end
+  object Datasource2: TDatasource
+    DataSet = SQLQuery2
+    left = 384
+    top = 120
+  end
+  object DataSource4: TDatasource
+    DataSet = SQLQuery4
+    left = 384
+    top = 328
+  end
+  object SQLQuery4: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'abonent'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'zadoljenostabonent'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'zadoljenostpovremen'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end>
+    Active = True
+    Database = MySQL50Connection1
+    Transaction = SQLTransaction4
+    SQL.Strings = (
+      'select * from jurnal;'
+    )
+    Params = <>
+    left = 384
+    top = 272
+  end
+  object SQLTransaction4: TSQLTransaction
+    Active = True
+    Action = caNone
+    Database = MySQL50Connection1
+    left = 384
+    top = 216
+  end
+  object MySQL55Connection1: TMySQL55Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'kartoteka'
+    KeepConnection = False
+    Password = '123456'
+    UserName = 'root'
+    HostName = 'localhost'
+    LogEvents = []
+    left = 24
+    top = 440
+  end
+end
